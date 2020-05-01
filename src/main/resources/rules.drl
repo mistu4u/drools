@@ -1,0 +1,9 @@
+package KiRules;
+import com.example.drools.domain.Offer;
+
+rule "HDFC"
+
+when offerObject: Offer(bankName=="HDFC");
+then
+offerObject.setDiscount(50);
+end;
